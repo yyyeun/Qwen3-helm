@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: qwen3
+  template:
+    metadata:
+      labels:
+        app: qwen3
+    spec:
+      containers:
+        - name: qwen3
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 8000
+          env:
+            - name: HF_HUB_ENABLE_HF_TRANSFER
+              value: "0"
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
