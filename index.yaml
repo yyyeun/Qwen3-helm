@@ -1,0 +1,21 @@
+apiVersion: v1
+entries:
+  qwen3:
+  - apiVersion: v2
+    created: "2025-07-11T15:30:57.839233+09:00"
+    description: Helm chart for serving Qwen3-0.6B via FastAPI
+    digest: ca1739985173e279b94b855f860eeb550f2e940305d76f9c4a4a823670bf6cea
+    keywords:
+    - huggingface
+    - qwen
+    - transformers
+    - fastapi
+    - llm
+    maintainers:
+    - email: yeeunheo.dev@gmail.com
+      name: Yeeun
+    name: qwen3
+    urls:
+    - https://yyyeun.github.io/Qwen3-helm/qwen3-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-07-11T15:30:57.834998+09:00"
