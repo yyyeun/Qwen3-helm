@@ -10,6 +10,7 @@ app = FastAPI()
 model_id = "Qwen/Qwen3-0.6B"
 
 # 모델 및 토크나이저 로드
+print("[INFO] This is a revision to verify the Actions workflow operation!")
 print("[INFO] Loading tokenizer and model...")
 tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(
